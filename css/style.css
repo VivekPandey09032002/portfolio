@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+
+/* basic setup for reusable code */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+/*css variable starts */
+:root {
+  --heading: rgb(0 10 45);
+  --para: #777;
+  --para-tint: #e4e4e4;
+  --white: #fff;
+  --helper: #8490ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249 249 255);
+  --navbar: #212529;
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 253) 100%);
+  --gradient-Support: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 253) 100%
+  );
+  --shadow: 0px 0px 20px 0px rgb(132 144 255/20%);
+  --shadowSupport : 0px 20px 20px 0px rgb(132 144 255/30%);
+}
+/* css variable ends here */
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: var(--heading);
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+p {
+  color: var(--para);
+  line-height: 1.6;
+  font-size: 1.7rem;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* basic setup done  */
+
+/* 
+=================================
+    Header Section Start
+=================================
+*/
+.header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 8rem;
+}
+
+.navbar-lists {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--navbar);
+  font-family: "Poppins", sans-serif;
+  transition: color 0.2s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: var(--helper);
+}
+
+/* 
+=================================
+    Resuable code Section Start
+=================================
+*/
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  
+}
+.section {
+  padding: 9rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+
+.grid-two-column{
+  grid-template-columns: repeat(2,1fr);
+}
+
+.btn {
+  background: var(--gradient-Support);
+  padding : 1.6rem 3.2rem;
+  border: none;
+  color : var(--helper-tint);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  -webkit-transition: box-shadow 0.3s ease;
+  -moz-transition: box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease;
+}
+
+.btn:hover, .btn:active {
+  box-shadow: var(--shadowSupport);
+}
+
+/* 
+=================================
+    Header Section Start
+=================================
+*/
+
+.section-hero {
+  background-color: var(--bg);
+}
+
+.section-hero-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.hero-top-data{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--helper);
+}
+
+.hero-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 6.4rem;
+
+}
+
+.hero-para {
+  margin-top : 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.section-hero-image{
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
+
+.hero-image {
+  max-width: 80%;
+}
