@@ -1,3 +1,1 @@
-# portfolio
-# portfolio
-# portfolio
+Creating Portfolio website using modern syntax and approach
